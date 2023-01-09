@@ -223,5 +223,9 @@ namespace Classe_vacanza
         {
             return new Vacanza(this);
         }
+
+        protected Vacanza(Vacanza other) : this(other.PackageId, other.Price, other.Destination, other.NumberOfDays, other.IncludesFlight,other.FlightCost)
+        {
+        }
     }
 }
