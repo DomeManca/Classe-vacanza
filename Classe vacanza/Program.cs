@@ -10,10 +10,16 @@ namespace Classe_vacanza
     {
         static void Main(string[] args)
         {
-            try
+           try
             {
-                Vacanza Caraibi = new Vacanza("A123", 198, "Caraibi", 5, true, 120);
-                Caraibi.Purchase(2);
+                Vacanza Manca = new Vacanza("A001", 200, "Caraibi", 5, true, 120);
+                Manca.Purchase(2);
+                Manca.ApplyDiscount(20);
+                Manca.ChooseFlight(true, 100);
+                Manca.ChooseNumberOfDays(4);
+                Vacanza Messi = new Vacanza("A002", 250, "Caraibi", 5, true, 90);
+                Messi.Purchase(3);
+                Console.WriteLine(Messi.ComparePackages(Manca));
             }
             catch (Exception e)
             { 
