@@ -143,7 +143,14 @@ namespace Classe_vacanza
             IncludesFlight = includesFlight;
             FlightCost = flightCost;
         }
-
+        public Vacanza(string packageId, decimal price, string destination, int numberOfDays) : this(packageId,price,destination,numberOfDays,false,0)
+        { }
+        public Vacanza(string packageId, decimal price, string destination) : this(packageId, price, destination, 0, false, 0)
+        { }
+        public Vacanza(string packageId, decimal price) : this(packageId, price, "N/A", 0, false, 0)
+        { }
+        public Vacanza(string packageId, string destination) : this(packageId, 0, destination, 0, false, 0)
+        { }
         public Vacanza() : this("Vuoto", 0, "N/A", 0, false, 0)
         { }
 
