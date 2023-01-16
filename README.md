@@ -16,7 +16,3 @@ Funzioni:
 - void ChooseNumberOfDays(int numberOfDays) // Scelta del numero dei giorni
 - ApplyDiscount(decimal discount) // Applica lo sconto al prezzo del pacchetto
 - Vacanza ComparePackages(Vacanza p) // Confronta il prezzo di due pacchetti con la stessa destinazione e numero di giorni
-// Costruttori base
-- string ToString()
-- bool Equals(Vacanza p)
-- Vacanza Clone()
