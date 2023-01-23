@@ -41,7 +41,7 @@ namespace Classe_vacanza
             }
             private set
             {
-                if (value > 0)
+                if (value >= 0)
                     _price = value;
                 else
                     throw new Exception("Inserire un Prezzo valido");
@@ -73,7 +73,7 @@ namespace Classe_vacanza
             }
             private set
             {
-                if (value > 0)
+                if (value >= 0)
                     _numberOfDays = value;
                 else
                     throw new Exception("Inserire un numero di giorni valido");
@@ -110,7 +110,7 @@ namespace Classe_vacanza
             }
             private set
             {
-                if (value > 0)
+                if (value >= 0)
                     _flightCost = value;
                 else
                     throw new Exception("Inserire un costo valido");
@@ -126,7 +126,7 @@ namespace Classe_vacanza
             }
             private set
             {
-                if (value > 0)
+                if (value >= 0)
                     _numberOfPeople = value;
                 else
                     throw new Exception("Inserire un numero di persone valido");
@@ -200,7 +200,7 @@ namespace Classe_vacanza
             {
                 decimal a = this.Price / this.NumberOfDays;
                 decimal b = p.Price / p.NumberOfDays;
-                if (a > b)
+                if (a < b)
                     return this;
                 else
                     return p;
